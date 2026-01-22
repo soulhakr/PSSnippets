@@ -4,3 +4,4 @@
 /net-commander
 
 .markdownlintignore
+testResults.xml
