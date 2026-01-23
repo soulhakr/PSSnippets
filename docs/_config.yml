@@ -1,6 +1,7 @@
 title: PSSnippets
 description: Portable snippet management for PowerShell 7+
-theme: minima
+#theme: minima
+theme: jekyll-theme-primer
 url: https://soulhakr.github.io/PSSnippets
 baseurl: ""
 github_username: soulhakr
