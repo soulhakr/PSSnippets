@@ -18,4 +18,3 @@ header_pages:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - minima

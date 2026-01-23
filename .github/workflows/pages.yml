@@ -24,12 +24,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Install Bundler
-        run: |
-          gem install --user-install bundler
-          export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
-          cd docs
-          bundle install
+#      - name: Install Bundler
+#        run: |
+#          gem install --user-install bundler
+#          export PATH="$HOME/.local/share/gem/ruby/3.2.0/bin:$PATH"
+#          cd docs
+#          bundle install
 
 #      - name: Debug Bundle Environment
 #        run: |
