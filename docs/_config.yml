@@ -1,0 +1,12 @@
+title: PSSnippets
+description: Portable snippet management for PowerShell 7+
+theme: minima
+url: https://soulhakr.github.io/PSSnippets
+baseurl: ""
+github_username: soulhakr
+repository: soulhakr/PSSnippets
+header_pages:
+  - index.md
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

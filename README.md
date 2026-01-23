@@ -2,6 +2,10 @@
 
 A PowerShell module for collecting, organizing, and reusing your favorite code snippets directly from the command line.
 
+## Documentation
+
+Visit <https://soulhakr.github.io/PSSnippets/> for the GitHub Pages site that mirrors this README, highlights common workflows, and will eventually host generated cmdlet help.
+
 ## Features
 
 - Store snippets in a portable JSON library that follows a simple schema.
