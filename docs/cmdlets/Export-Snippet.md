@@ -1,11 +1,14 @@
 ---
+layout: page
+title: Export-Snippet
+permalink: /cmdlets/Export-Snippet
 external help file: PSSnippets-help.xml
 Module Name: PSSnippets
 online version:
 schema: 2.0.0
 ---
 
-# Export-Snippet
+<!-- # Export-Snippet -->
 
 ## SYNOPSIS
 

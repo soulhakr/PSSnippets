@@ -1,11 +1,14 @@
 ---
+layout: page
+title: Get-Snippet
+permalink: /cmdlets/Get-Snippet
 external help file: PSSnippets-help.xml
 Module Name: PSSnippets
 online version:
 schema: 2.0.0
 ---
 
-# Get-Snippet
+<!-- # Get-Snippet -->
 
 ## SYNOPSIS
 

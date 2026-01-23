@@ -1,11 +1,14 @@
 ---
+layout: page
+title: Remove-Snippet
+permalink: /cmdlets/Remove-Snippet
 external help file: PSSnippets-help.xml
 Module Name: PSSnippets
 online version:
 schema: 2.0.0
 ---
 
-# Remove-Snippet
+<!-- # Remove-Snippet -->
 
 ## SYNOPSIS
 

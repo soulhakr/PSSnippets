@@ -1,15 +1,16 @@
 ---
+layout: page
+title: Export-SnippetToMarkdown
+permalink: /cmdlets/Export-SnippetToMarkdown
 external help file: PSSnippets-help.xml
 Module Name: PSSnippets
 online version:
 schema: 2.0.0
 ---
 
-# Export-SnippetToMarkdown
-
 ## SYNOPSIS
 
-Exports snippets to MultiMarkdown format.
+Exports snippets database to formatted markdown.
 
 ## SYNTAX
 

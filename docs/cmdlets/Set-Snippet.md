@@ -1,11 +1,14 @@
 ---
+layout: page
+title: Set-Snippet
+permalink: /cmdlets/Set-Snippet
 external help file: PSSnippets-help.xml
 Module Name: PSSnippets
 online version:
 schema: 2.0.0
 ---
 
-# Set-Snippet
+<!-- # Set-Snippet -->
 
 ## SYNOPSIS
 

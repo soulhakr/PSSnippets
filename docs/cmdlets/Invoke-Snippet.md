@@ -1,11 +1,14 @@
 ---
+layout: page
+title: Invoke-Snippet
+permalink: /cmdlets/Invoke-Snippet
 external help file: PSSnippets-help.xml
 Module Name: PSSnippets
 online version:
 schema: 2.0.0
 ---
 
-# Invoke-Snippet
+<!-- # Invoke-Snippet -->
 
 ## SYNOPSIS
 

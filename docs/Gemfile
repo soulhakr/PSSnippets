@@ -5,8 +5,9 @@ ruby "4.0.1"
 
 # Core site generator and theme
 gem "jekyll", "~> 4.3"
-gem "jekyll-theme-primer"
+#gem "jekyll-theme-primer"
 gem "webrick", "~> 1.8"
+gem "minima", "~> 2.5"
 
 # Plugins referenced in _config.yml
 group :jekyll_plugins do

@@ -75,6 +75,10 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     mercenary (0.4.0)
+    minima (2.5.2)
+      jekyll (>= 3.5, < 5.0)
+      jekyll-feed (~> 0.9)
+      jekyll-seo-tag (~> 2.1)
     net-http (0.9.1)
       uri (>= 0.11.1)
     octokit (6.1.1)
@@ -139,6 +143,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.17)
   jekyll-seo-tag (~> 2.8)
   jekyll-theme-primer
+  minima (~> 2.5)
   webrick (~> 1.8)
 
 CHECKSUMS
@@ -174,6 +179,7 @@ CHECKSUMS
   listen (3.10.0) sha256=c6e182db62143aeccc2e1960033bebe7445309c7272061979bb098d03760c9d2
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
   mercenary (0.4.0) sha256=b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f405138
+  minima (2.5.2) sha256=9c434e3b7bc4a0f0ab488910438ed3757a0502ff1060d172f361907fc38aa45a
   net-http (0.9.1) sha256=25ba0b67c63e89df626ed8fac771d0ad24ad151a858af2cc8e6a716ca4336996
   octokit (6.1.1) sha256=920e4a9d820205f70738f58de6a7e6ef0e2f25b27db954b5806a63105207b0bf
   pathutil (0.16.2) sha256=e43b74365631cab4f6d5e4228f812927efc9cb2c71e62976edcb252ee948d589

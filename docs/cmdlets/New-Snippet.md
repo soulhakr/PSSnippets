@@ -1,11 +1,14 @@
 ---
+layout: page
+title: New-Snippet
+permalink: /cmdlets/New-Snippet
 external help file: PSSnippets-help.xml
 Module Name: PSSnippets
 online version:
 schema: 2.0.0
 ---
 
-# New-Snippet
+<!-- # New-Snippet -->
 
 ## SYNOPSIS
 
