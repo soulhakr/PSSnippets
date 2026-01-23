@@ -26,7 +26,8 @@ jobs:
 
       - name: Install Bundler
         run: |
-          gem install bundler
+          gem install --user-install bundler
+          export PATH="$HOME/.gem/ruby/3.2.0/bin:$PATH"
           bundle install
 
       - name: Debug Bundle Environment
