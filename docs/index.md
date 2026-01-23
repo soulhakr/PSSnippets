@@ -84,7 +84,8 @@ Export-Snippet -Name "Profile" -OutputPath ./exports -IncludeDescription
 Export-SnippetToMarkdown -Title "Team Snippets" -OutputPath ./snippets.md
 ```
 
-<![CDATA[
+<!--
+
 ## Documentation Roadmap
 
 This site is a starting point. Generate per-command help with [PlatyPS](https://github.com/PowerShell/platyPS):
@@ -95,7 +96,8 @@ New-MarkdownHelp -Module PSSnippets -OutputFolder docs/cmdlets
 ```
 
 Link any generated pages from a navigation section in `_config.yml` (see below).
-]]>
+
+-->
 
 ## Need Help?
 
