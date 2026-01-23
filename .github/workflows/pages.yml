@@ -24,6 +24,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Debug Bundle Environment
+        run: |
+          bundle env
+          bundle list
+          cat _config.yml
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
