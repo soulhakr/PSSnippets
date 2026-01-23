@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Executes a code snippet from the snippet library.
 
 ## SYNTAX
 
@@ -20,39 +20,32 @@ Invoke-Snippet [-Name] <String> [[-Language] <String>] [[-Tags] <String[]>]
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+Retrieves and executes a snippet by exact name match using Invoke-Expression.
+The snippet file location is determined by the $env:SNIPPETS_HOME environment
+variable, or defaults to ~/.snippets.json if not set.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Invoke-Snippet -Name "Reload Profile"
+Executes the snippet named "Reload Profile".
 ```
 
-{{ Add example description here }}
+### EXAMPLE 2
+
+```powershell
+"Show PSModulePath" | Invoke-Snippet
+Executes a snippet using pipeline input.
+```
 
 ## PARAMETERS
 
-### -Language
-
-{{ Fill Language Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Name
 
-{{ Fill Name Description }}
+The exact name of the snippet to execute.
+This parameter is mandatory.
 
 ```yaml
 Type: String
@@ -60,15 +53,32 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -Language
+
+The programming language of the snippet.
+Defaults to 'powershell'.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: Powershell
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
-{{ Fill Tags Description }}
+Optional tags to filter snippets by.
 
 ```yaml
 Type: String[]
@@ -76,8 +86,8 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
-Default value: None
+Position: 3
+Default value: @()
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -106,12 +116,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-### System.String[]
+### Accepts snippet names or objects with a Name property from the pipeline
 
 ## OUTPUTS
 
 ### System.Object
 
+### Returns whatever the invoked snippet writes to the pipeline
+
 ## NOTES
+
+WARNING: This cmdlet uses Invoke-Expression to execute snippet code.
+Only run snippets from trusted sources.
 
 ## RELATED LINKS

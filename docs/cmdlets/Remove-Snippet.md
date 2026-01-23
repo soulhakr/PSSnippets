@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Removes a code snippet from the snippet library.
 
 ## SYNTAX
 
@@ -19,23 +19,40 @@ Remove-Snippet [-Name] <String> [-ProgressAction <ActionPreference>] [<CommonPar
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+Deletes a snippet by name from the snippet library.
+The snippet file location
+is determined by the $env:SNIPPETS_HOME environment variable, or defaults to
+~/.snippets.json if not set.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-Snippet -Name "Old Snippet"
+Removes the snippet named "Old Snippet".
 ```
 
-{{ Add example description here }}
+### EXAMPLE 2
+
+```powershell
+"Temporary Snippet" | Remove-Snippet
+Removes a snippet using pipeline input.
+```
+
+### EXAMPLE 3
+
+```powershell
+Get-Snippet "Test" | Remove-Snippet
+Finds and removes a snippet using pipeline.
+```
 
 ## PARAMETERS
 
 ### -Name
 
-{{ Fill Name Description }}
+The exact name of the snippet to remove.
+This parameter is mandatory.
 
 ```yaml
 Type: String
@@ -43,7 +60,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -71,12 +88,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
+### System.String, System.Management.Automation.PSCustomObject
+
+### Accepts snippet names or objects with a Name property from the pipeline
 
 ## OUTPUTS
 
-### System.Object
+### None
+
+### Writes warning or confirmation messages to the host only
 
 ## NOTES
+
+If the snippet is not found, a warning is displayed and no changes are made.
 
 ## RELATED LINKS

@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Retrieves code snippets from the snippet library.
 
 ## SYNTAX
 
@@ -20,23 +20,34 @@ Get-Snippet [[-Name] <String>] [[-Language] <String>] [[-Tags] <String[]>] [-Pro
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+Searches for and returns code snippets that match the specified name pattern.
+Uses wildcard matching on the snippet name.
+The snippet file location is
+determined by the $env:SNIPPETS_HOME environment variable, or defaults to
+~/.snippets.json if not set.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Get-Snippet -Name "Profile"
+Retrieves all snippets with "Profile" in the name.
 ```
 
-{{ Add example description here }}
+### EXAMPLE 2
+
+```powershell
+"Reload" | Get-Snippet
+Retrieves snippets using pipeline input.
+```
 
 ## PARAMETERS
 
-### -Language
+### -Name
 
-{{ Fill Language Description }}
+The name or partial name of the snippet to retrieve.
+Supports wildcard matching.
 
 ```yaml
 Type: String
@@ -46,13 +57,14 @@ Aliases:
 Required: False
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Name
+### -Language
 
-{{ Fill Name Description }}
+The programming language of the snippet.
+Defaults to 'powershell'.
 
 ```yaml
 Type: String
@@ -60,15 +72,15 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Position: 2
+Default value: Powershell
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -Tags
 
-{{ Fill Tags Description }}
+Optional tags to filter snippets by.
 
 ```yaml
 Type: String[]
@@ -76,8 +88,8 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
-Default value: None
+Position: 3
+Default value: @()
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -106,11 +118,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-### System.String[]
+### Accepts snippet names or objects with a Name property from the pipeline
 
 ## OUTPUTS
 
-### System.Object
+### PSCustomObject
+
+### Returns snippet objects with name, description, and code properties
 
 ## NOTES
 

@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Creates a new code snippet in the snippet library.
 
 ## SYNTAX
 
@@ -20,23 +20,52 @@ New-Snippet [-Name] <String> [-Description] <String> [-Code] <String> [[-Languag
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+Adds a new snippet with the specified name, description, and code to the
+snippet library.
+The snippet name must be unique.
+The snippet file location
+is determined by the $env:SNIPPETS_HOME environment variable, or defaults to
+~/.snippets.json if not set.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+New-Snippet -Name "List Files" -Description "List all files" -Code "Get-ChildItem"
+Creates a new snippet with the specified properties.
 ```
 
-{{ Add example description here }}
+### EXAMPLE 2
+
+```powershell
+[PSCustomObject]@{Name="Test"; Description="Test snippet"; Code="Write-Host 'test'"} | New-Snippet
+Creates a snippet using pipeline input.
+```
 
 ## PARAMETERS
 
-### -Code
+### -Name
 
-{{ Fill Code Description }}
+The unique name for the snippet.
+This parameter is mandatory.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Description
+
+A description of what the snippet does.
+This parameter is mandatory.
 
 ```yaml
 Type: String
@@ -50,9 +79,10 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Description
+### -Code
 
-{{ Fill Description Description }}
+The code content of the snippet.
+This parameter is mandatory.
 
 ```yaml
 Type: String
@@ -60,7 +90,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 1
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -68,7 +98,8 @@ Accept wildcard characters: False
 
 ### -Language
 
-{{ Fill Language Description }}
+The programming language of the snippet.
+Defaults to 'powershell'.
 
 ```yaml
 Type: String
@@ -76,31 +107,15 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 3
-Default value: None
+Position: 4
+Default value: Powershell
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-
-{{ Fill Name Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
 ### -Tags
 
-{{ Fill Tags Description }}
+Optional tags to categorize the snippet.
 
 ```yaml
 Type: String[]
@@ -108,8 +123,8 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 4
-Default value: None
+Position: 5
+Default value: @()
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -136,14 +151,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String
+### System.String, System.Management.Automation.PSCustomObject
 
-### System.String[]
+### Accepts snippet definitions from the pipeline when properties match the parameter set
 
 ## OUTPUTS
 
-### System.Object
+### None
+
+### Writes progress and warnings to the host only
 
 ## NOTES
+
+If a snippet with the same name already exists, a warning is displayed and
+no changes are made.
 
 ## RELATED LINKS

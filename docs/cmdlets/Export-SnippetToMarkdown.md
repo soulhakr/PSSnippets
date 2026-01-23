@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+Exports snippets to MultiMarkdown format.
 
 ## SYNTAX
 
@@ -20,39 +20,32 @@ Export-SnippetToMarkdown [[-OutputPath] <String>] [[-Title] <String>] [-Progress
 
 ## DESCRIPTION
 
-{{ Fill in the Description }}
+Reads snippets from the snippet library and generates a MultiMarkdown document
+with properly formatted code blocks including language syntax highlighting.
+Snippets are organized by their primary tag.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
 
 ```powershell
-PS C:\> {{ Add example code here }}
+Export-SnippetToMarkdown -OutputPath ~/Documents/snippets.md
+Exports all snippets to a markdown file in the Documents folder.
 ```
 
-{{ Add example description here }}
+### EXAMPLE 2
+
+```powershell
+Export-SnippetToMarkdown -Title "My PowerShell Snippets" -OutputPath ./my-snippets.md
+Exports snippets with a custom title.
+```
 
 ## PARAMETERS
 
 ### -OutputPath
 
-{{ Fill OutputPath Description }}
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Title
-
-{{ Fill Title Description }}
+The path where the markdown file should be saved.
+Defaults to './snippets.md'
 
 ```yaml
 Type: String
@@ -61,7 +54,24 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
+Default value: ./snippets.md
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Title
+
+The title for the markdown document.
+Defaults to 'Code Snippets'
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: Code Snippets
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -92,7 +102,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
+### System.IO.FileInfo
+
+### Returns the file info for the created markdown file
 
 ## NOTES
 
