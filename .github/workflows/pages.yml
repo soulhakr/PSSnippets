@@ -24,6 +24,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Install Bundler
+        run: |
+          gem install bundler
+          bundle install
+
       - name: Debug Bundle Environment
         run: |
           bundle env
