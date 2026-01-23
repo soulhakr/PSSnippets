@@ -35,7 +35,7 @@ Get-Snippet -Name "Profile"
 Retrieves all snippets with "Profile" in the name.
 ```
 
-### EXAMPLE 2
+Controls how PowerShell responds to progress records emitted by this cmdlet (for example, output from Write-Progress). Added in PowerShell 7.4. See [-ProgressAction at Microsoft Learn](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/common-parameter-names?view=powershell-7.5#progressaction-alias-proga) for accepted values.
 
 ```powershell
 "Reload" | Get-Snippet
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ### -ProgressAction
 
-{{ Fill ProgressAction Description }}
+Controls how PowerShell responds to progress records emitted by this cmdlet (for example, output from Write-Progress). Added in PowerShell 7.4. See [-ProgressAction at Microsoft Learn](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/common-parameter-names?view=powershell-7.5#progressaction-alias-proga) for accepted values.
 
 ```yaml
 Type: ActionPreference

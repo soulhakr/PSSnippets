@@ -8,6 +8,13 @@ github_username: soulhakr
 repository: soulhakr/PSSnippets
 header_pages:
   - index.md
+  - cmdlets/Get-Snippet.md
+  - cmdlets/Invoke-Snippet.md
+  - cmdlets/New-Snippet.md
+  - cmdlets/Set-Snippet.md
+  - cmdlets/Remove-Snippet.md
+  - cmdlets/Export-Snippet.md
+  - cmdlets/Export-SnippetToMarkdown.md
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

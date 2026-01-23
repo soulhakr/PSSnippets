@@ -4,7 +4,7 @@ layout: default
 description: Portable PowerShell snippets module
 ---
 
-## PSSnippets - Overview
+## PSSnippets - An Overview
 
 PSSnippets is a PowerShell 7+ module for collecting, organizing, and reusing handy code snippets directly from your shell. Store each snippet in a portable JSON library, search by name, tags, or language, and execute trusted snippets on-demand.
 

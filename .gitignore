@@ -5,3 +5,7 @@
 
 .markdownlintignore
 testResults.xml
+
+# Local Jekyll build artifacts
+_site/
+docs/.jekyll-cache/
