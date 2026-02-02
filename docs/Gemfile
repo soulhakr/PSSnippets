@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
 # Local site uses the same theme/plugins as GitHub Pages
-ruby "4.0.1"
-#ruby "3.2.0"
+ruby "3.2.10"
+# Note: GitHub Actions ubuntu-latest runners use Ruby 3.2.x
 
 # Core site generator and theme
 gem "jekyll", "~> 4.3"
